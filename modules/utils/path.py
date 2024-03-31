@@ -45,7 +45,7 @@ def rootName(name):
     if not name:
         return name
 
-    return name.split("|")[-1]
+    return name.rpartition("|")[-1]
 
 
 def baseName(name):
@@ -67,7 +67,7 @@ def baseName(name):
     if not name:
         return name
 
-    return name.split("|")[-1].split(":")[-1]
+    return name.rpartition("|")[-1].rpartition(":")[-1]
 
 
 def namespace(name):
@@ -88,7 +88,8 @@ def namespace(name):
     if not name:
         return name
 
-    if name.find(":") == -1:
-        return rootName(name).rsplit(":", 1)[0]
+    root = rootName(name)
+    if ":" in root:
+        return root.partition(":")[0]
 
     return ""
