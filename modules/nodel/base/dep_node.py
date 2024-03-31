@@ -28,7 +28,7 @@ class Dep_Node(object):
               dep.rename("node_002")
                 dep.delete()
     """
-    def __init__(self, node, nodeType):
+    def __init__(self, node, nodeType=None):
         self._dep = None
         self.node = node
 

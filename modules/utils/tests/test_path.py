@@ -14,6 +14,7 @@ from modules.utils.path import (
     rootName
 )
 
+
 class Test_Path(unittest.TestCase):
     def test_generateReprString(self):
         clsName = "Dep_Node"
@@ -40,7 +41,6 @@ class Test_Path(unittest.TestCase):
 
         self.assertEqual(result, expectedResult)
 
-
     def test_namespace(self):
         name = "namespace:baseGRP|namespace:subGRP|namespace:sphere_GEO"
         expectedResult = "namespace"
@@ -50,10 +50,5 @@ class Test_Path(unittest.TestCase):
         self.assertEqual(result, expectedResult)
 
 
-
-
 if __name__ == "__main__":
     unittest.main()
-
-
-

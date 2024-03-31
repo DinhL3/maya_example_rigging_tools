@@ -43,7 +43,7 @@ def toMObject(node):
                 name = "L_hand_JNT"
                 obj = toMObject(name)
                 print(obj.fullPathName())
-                # Output: BASE_GRP|SUB_GRP|L_hand_JNT
+                # Output: |BASE_GRP|SUB_GRP|L_hand_JNT
     """
     selectionList = OpenMaya.MSelectionList()
     selectionList.add(node)
